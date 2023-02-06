@@ -1,0 +1,26 @@
+<div class="container my-5">
+    <h3 >BOOK LIST</h3>
+    <table class="table" *ngIf="books && books.length > 0">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">AuthorName</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books" >
+            <td>{{book.id}}</td> 
+            <td>{{book.name}}</td>
+            <td>{{book.authorName}}</td>
+            <td>{{book.category}}</td>
+            <td>{{book.description}}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="!books || books.length <=0">No Books Found !!</p>
+    </div>
+    
